@@ -1,0 +1,20 @@
+# Static values (for initial test case)
+T = 25  # Temperature in Celsius
+H = 60  # Humidity in percentage
+w = 15  # Wind speed in km/h
+
+# Quadratic equation to calculate W
+W = 8.5 * (T ** 2) - 0.2 * H + 0.1 * w - 15
+
+# Classify the weather based on W
+if W > 300:
+    weather = "sunny"
+elif 200 < W <= 300:
+    weather = "cloudy"
+elif 100 < W <= 200:
+    weather = "rainy"
+else:
+    weather = "stormy"
+
+# Display the result
+print(f"Prediction for T={T}, H={H}, w={w} -> Weather: {weather} (W = {W:.2f})")
